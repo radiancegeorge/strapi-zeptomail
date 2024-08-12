@@ -16,20 +16,20 @@ yarn add strapi-zeptomail
    - Open your Strapi project's `config/plugins.js` file.
    - Add the following configuration:
 
-     ```javascript
-     module.exports = ({ env }) => ({
-       email: {
-         provider: "zeptomail",
-         providerOptions: {
-           apiKey: env("ZEPTOMAIL_API_KEY"),
-         },
-         settings: {
-           defaultFrom: "your-default-from-email@example.com",
-           defaultReplyTo: "your-default-reply-to-email@example.com",
-         },
-       },
-     });
-     ```
+```javascript
+module.exports = ({ env }) => ({
+email: {
+    provider: "zeptomail",
+    providerOptions: {
+    apiKey: env("ZEPTOMAIL_API_KEY"),
+    },
+    settings: {
+    defaultFrom: "your-default-from-email@example.com",
+    defaultReplyTo: "your-default-reply-to-email@example.com",
+    },
+},
+});
+```
 
 2. **Secure Your API Key:**
 
