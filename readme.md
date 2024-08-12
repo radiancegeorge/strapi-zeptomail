@@ -4,10 +4,11 @@ A custom email provider for Strapi v4, enabling seamless email sending through t
 
 ## Installation
 
-````bash
+```bash
 npm install strapi-zeptomail
 # or
 yarn add strapi-zeptomail
+```
 
 ## Configuration
 
@@ -16,26 +17,25 @@ yarn add strapi-zeptomail
    - Open your Strapi project's `config/plugins.js` file.
    - Add the following configuration:
 
-```javascript
-module.exports = ({ env }) => ({
-email: {
-    provider: "zeptomail",
-    providerOptions: {
-    apiKey: env("ZEPTOMAIL_API_KEY"),
-    },
-    settings: {
-    defaultFrom: "your-default-from-email@example.com",
-    defaultReplyTo: "your-default-reply-to-email@example.com",
-    },
-},
-});
-```
+     ```javascript
+     module.exports = ({ env }) => ({
+       email: {
+         provider: "zeptomail",
+         providerOptions: {
+           apiKey: env("ZEPTOMAIL_API_KEY"),
+         },
+         settings: {
+           defaultFrom: "your-default-from-email@example.com",
+           defaultReplyTo: "your-default-reply-to-email@example.com",
+         },
+       },
+     });
+     ```
 
 2. **Secure Your API Key:**
 
    - Replace `env('ZEPTOMAIL_API_KEY')` with your actual ZeptoMail API key.
    - Store this key securely in your `.env` file or within the `config/plugins.js` itself.
-````
 
 ## Usage
 
