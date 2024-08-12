@@ -20,13 +20,15 @@ yarn add strapi-zeptomail
      ```javascript
      module.exports = ({ env }) => ({
        email: {
-         provider: "zeptomail",
-         providerOptions: {
-           apiKey: env("ZEPTOMAIL_API_KEY"),
-         },
-         settings: {
-           defaultFrom: "your-default-from-email@example.com",
-           defaultReplyTo: "your-default-reply-to-email@example.com",
+         config: {
+           provider: "strapi-zeptomail",
+           providerOptions: {
+             apiKey: env("ZEPTOMAIL_API_KEY"),
+           },
+           settings: {
+             defaultFrom: "your-default-from-email@example.com",
+             defaultReplyTo: "your-default-reply-to-email@example.com",
+           },
          },
        },
      });

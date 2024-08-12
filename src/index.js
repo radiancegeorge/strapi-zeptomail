@@ -80,16 +80,11 @@ function generateZeptoMailParams(options) {
       zeptoMailParams[key] = options[key];
     }
   }
-  console.log(zeptoMailParams);
+
   return zeptoMailParams;
 }
 
 const sendMail = (opt, key, cb) => {
-  // "bounce_address":"bounces@info.zylker.com",
-  // "from": { "address": "accounts@info.zylker.com",  "name": "Paula"},
-  // "to": [{"email_address": {"address": "rudra.d@zylker.com","name": "Rudra"}}],
-  // "subject":"Account Confirmation",
-  // "htmlbody":"<div><b> Kindly click on Verify Account to confirm your account </b></div>"
   const data = generateZeptoMailParams(opt);
   zepto({
     method: "post",
