@@ -5,7 +5,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "strapi",
+    "zeptomail",
+    "email",
+    "email provider",
+    "strapi plugin",
+    "transactional emails",
+    "email deliverability",
+    "nodejs",
+    "headless CMS"
+  ],
   "author": "",
   "license": "ISC",
   "description": "",
